@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #0090ff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cronometro{
+    display: flex;
+    gap: 50px;
+    font-size: 100px;
+    color: white;
+    position: relative;
+}
+
+.cronometro > div{
+    background-color: black;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cronometro > div:hover #PopOver{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.cronometro *:hover{
+    cursor: default;
+}
+
+#PopOver{
+    font-size: 25px;
+    position: absolute;
+    bottom: -42px;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    color: black;
+    opacity: 0;
+}
+
+#PopOver::before{
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Botões */
+
+.containerBotoes{
+    position: absolute;
+    bottom: 10px;
+}
+
+.containerBotoes button{
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 10px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #000;
+}
+
+.containerBotoes button:hover{
+    background-color: #fff;
+    color: #000;
+    text-shadow: none;
+    transition: 0.5s;
+}
